@@ -193,10 +193,6 @@ class Category(BaseModel):
 
     @cache_decorator(60 * 60 * 10)
     def get_category_tree(self):
-        """
-        递归获得分类目录的父级
-        :return:
-        """
         categorys = []
 
         def parse(category):
